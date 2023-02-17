@@ -21,10 +21,12 @@
 // function solution(arr){
 //     return arr.reduce((a,b)=>a+b)/arr.length
 // }
-function solution(n){
-    return String(n).split("").reduce((acc,cur)=>acc+parseInt(cur),0)
-}
+// function solution(n){
+//     return String(n).split("").reduce((acc,cur)=>acc+parseInt(cur),0)
+// }
 
 // 숫자를 문자열로 변환 
 //split으로 자릿수 쪼개고 배열 만들기
-
+function solution(num) {
+    return  (num%2===0) ? "Even" : "Odd"
+    }
