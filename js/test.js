@@ -11,11 +11,13 @@
 
 
 // 2023-02-17 프로그래머스 나머지가 1이되는 수 찾기 
-function solution(n) {
-    for (let i=2; i<n; i++){
-        if(n%i===1){
-            return i;
-        }
-    }    
+// function solution(n) {
+//     for (let i=2; i<n; i++){
+//         if(n%i===1){
+//             return i;
+//         }
+//     }    
+// }
+function solution(arr){
+    return arr.reduce((a,b)=>a+b)/arr.length
 }
-
