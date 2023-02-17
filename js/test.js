@@ -27,6 +27,18 @@
 
 // 숫자를 문자열로 변환 
 //split으로 자릿수 쪼개고 배열 만들기
-function solution(num) {
-    return  (num%2===0) ? "Even" : "Odd"
+// function solution(num) {
+//     return  (num%2===0) ? "Even" : "Odd"
+//     }
+function solution(n) {
+    let arr=[];
+    let answer=0;
+    for (let i=1; i<=n; i++){
+        if(n%i===0){
+            answer+=i
+        }
     }
+    return answer
+}
+
+
