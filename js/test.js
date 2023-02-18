@@ -30,15 +30,30 @@
 // function solution(num) {
 //     return  (num%2===0) ? "Even" : "Odd"
 //     }
-function solution(n) {
-    let arr=[];
+// function solution(n) {
+//     let arr=[];
+//     let answer=0;
+//     for (let i=1; i<=n; i++){
+//         if(n%i===0){
+//             answer+=i
+//         }
+//     }
+//     return answer
+// }
+
+// 2023-02-18 사과장수
+function solution(k, m, score) {
     let answer=0;
-    for (let i=1; i<=n; i++){
-        if(n%i===0){
-            answer+=i
-        }
+    if (m>score.length){
+        return 0;
     }
-    return answer
+    //최댓값으로 숫자 정렬
+  score.sort((a,b)=>b-a);
+    let box= Math.floor(score.length/m);
+    for (let i=1; i<=box; i++){
+         answer += score[m*i-1] * m;
+    }
+    return answer;
 }
 
 
