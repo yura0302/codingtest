@@ -77,6 +77,11 @@
 // }
 
 //정수 제곱근 판별 
+// function solution(n) {
+//     return Math.sqrt(n)%1 !==0 ? -1 : Math.pow(Math.sqrt(n)+1,2);
+// }
+
+//정수 내림차순으로 배치하기
 function solution(n) {
-    return Math.sqrt(n)%1 !==0 ? -1 : Math.pow(Math.sqrt(n)+1,2);
+    return Number(n.toString().split("").sort((a,b)=>b-a).join(""))
 }
