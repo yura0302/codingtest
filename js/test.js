@@ -68,10 +68,15 @@
 // }
 
 //x만큼 간격이 있는 n개의 숫자
-function solution(x, n) {
-    var answer = [];
-    for (i=1; i<=n; i++){
-     answer.push(i*x);
-    }
-    return answer;
+// function solution(x, n) {
+//     var answer = [];
+//     for (i=1; i<=n; i++){
+//      answer.push(i*x);
+//     }
+//     return answer;
+// }
+
+//정수 제곱근 판별 
+function solution(n) {
+    return Math.sqrt(n)%1 !==0 ? -1 : Math.pow(Math.sqrt(n)+1,2);
 }
