@@ -56,13 +56,22 @@
 //     return answer;
 // }
 
-function solution(s){
-    let numberP=0;
-    let numberY=0;
-    let answer=s.toLowerCase();
-    for (let i=0; i<s.length; i++){
-        answer[i]=="p" ? numberP++ :null
-        answer[i]=="y" ? numberY++ : null
+// function solution(s){
+//     let numberP=0;
+//     let numberY=0;
+//     let answer=s.toLowerCase();
+//     for (let i=0; i<s.length; i++){
+//         answer[i]=="p" ? numberP++ :null
+//         answer[i]=="y" ? numberY++ : null
+//     }
+//     return numberP==numberY ? true : false
+// }
+
+//x만큼 간격이 있는 n개의 숫자
+function solution(x, n) {
+    var answer = [];
+    for (i=1; i<=n; i++){
+     answer.push(i*x);
     }
-    return numberP==numberY ? true : false
+    return answer;
 }
