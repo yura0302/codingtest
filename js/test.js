@@ -42,18 +42,27 @@
 // }
 
 // 2023-02-18 사과장수
-function solution(k, m, score) {
-    let answer=0;
-    if (m>score.length){
-        return 0;
+// function solution(k, m, score) {
+//     let answer=0;
+//     if (m>score.length){
+//         return 0;
+//     }
+//     //최댓값으로 숫자 정렬
+//   score.sort((a,b)=>b-a);
+//     let box= Math.floor(score.length/m);
+//     for (let i=1; i<=box; i++){
+//          answer += score[m*i-1] * m;
+//     }
+//     return answer;
+// }
+
+function solution(s){
+    let numberP=0;
+    let numberY=0;
+    let answer=s.toLowerCase();
+    for (let i=0; i<s.length; i++){
+        answer[i]=="p" ? numberP++ :null
+        answer[i]=="y" ? numberY++ : null
     }
-    //최댓값으로 숫자 정렬
-  score.sort((a,b)=>b-a);
-    let box= Math.floor(score.length/m);
-    for (let i=1; i<=box; i++){
-         answer += score[m*i-1] * m;
-    }
-    return answer;
+    return numberP==numberY ? true : false
 }
-
-
