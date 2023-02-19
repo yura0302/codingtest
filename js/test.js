@@ -82,6 +82,15 @@
 // }
 
 //정수 내림차순으로 배치하기
-function solution(n) {
-    return Number(n.toString().split("").sort((a,b)=>b-a).join(""))
+// function solution(n) {
+//     return Number(n.toString().split("").sort((a,b)=>b-a).join(""))
+// }
+
+// 2023-02-20 나머지가 1이 되는 수 찾기
+function solution (n){
+    for (let i=2; i<n; i++){
+        if (n%i===1){
+            return i;
+        }
+    }
 }
