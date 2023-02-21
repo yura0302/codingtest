@@ -96,11 +96,16 @@
 // }
 
 //하샤드 수
-function solution(x) {
-    let sum =0; // 0
-    let arr= String(x).split(""); //string 으로 쪼개기 [1,0]
-    for (let i=0; i<arr.length; i++){
-        sum+=Number(arr[i]);
-    }
-    return x%sum===0 ? true : false
+// function solution(x) {
+//     let sum =0; // 0
+//     let arr= String(x).split(""); //string 으로 쪼개기 [1,0]
+//     for (let i=0; i<arr.length; i++){
+//         sum+=Number(arr[i]);
+//     }
+//     return x%sum===0 ? true : false
+// }
+
+//2023-02-21 (1) 가우스
+function solution (a,b) {
+    return (a+b)*(Math.abs(b-a)+1)/2
 }
