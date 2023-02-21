@@ -106,6 +106,16 @@
 // }
 
 //2023-02-21 (1) 가우스
-function solution (a,b) {
-    return (a+b)*(Math.abs(b-a)+1)/2
+// function solution (a,b) {
+//     return (a+b)*(Math.abs(b-a)+1)/2
+// }
+
+// 2023-02-21 (2)
+function solution(num) {
+    let answer = 0;
+    while (num!=1 && answer!=500){
+        num%2==0? num=num/2 : num=num*3+1
+        answer++;
+    }
+    return num==1? answer : -1;
 }
