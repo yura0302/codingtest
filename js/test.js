@@ -111,11 +111,16 @@
 // }
 
 // 2023-02-21 (2)
-function solution(num) {
-    let answer = 0;
-    while (num!=1 && answer!=500){
-        num%2==0? num=num/2 : num=num*3+1
-        answer++;
+// function solution(num) {
+//     let answer = 0;
+//     while (num!=1 && answer!=500){
+//         num%2==0? num=num/2 : num=num*3+1
+//         answer++;
+//     }
+//     return num==1? answer : -1;
+// }
+function solution(seoul) {
+    for (let i =0; i<seoul.length; i++){
+        if(seoul[i]==="Kim") return `김서방은 ${i}에 있다`
     }
-    return num==1? answer : -1;
 }
