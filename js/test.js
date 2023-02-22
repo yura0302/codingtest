@@ -136,7 +136,16 @@
 //     return answer.length==0? [-1] : answer.sort((a,b)=>a-b)
 // }
 // 폰번호 가리기
-function solution(num) {
-    let result= "*".repeat(num.length -4) + num.slice(-4);
-    return result;
+// function solution(num) {
+//     let result= "*".repeat(num.length -4) + num.slice(-4);
+//     return result;
+// }
+// function solution(num) {
+//     let result= "*".repeat(num.length -4) + num.slice(-4);
+//     return result;
+// }
+
+//음양 더하기
+function solution (absolutes,signs){
+    return absolutes.reduce((acc,cur,i)=>acc+(cur*(signs[i]==true? 1:-1)),0)
 }
