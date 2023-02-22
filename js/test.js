@@ -119,8 +119,19 @@
 //     }
 //     return num==1? answer : -1;
 // }
-function solution(seoul) {
-    for (let i =0; i<seoul.length; i++){
-        if(seoul[i]==="Kim") return `김서방은 ${i}에 있다`
+// function solution(seoul) {
+//     for (let i =0; i<seoul.length; i++){
+//         if(seoul[i]==="Kim") return `김서방은 ${i}에 있다`
+//     }
+// }
+
+// 2023-02-22 (1) 나누어 떨어지는 숫자 배열 
+function solution(arr, divisor) {
+    let answer=[]
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%divisor==0){
+            answer.push(arr[i])
+        }
     }
+    return answer.length==0? [-1] : answer.sort((a,b)=>a-b)
 }
