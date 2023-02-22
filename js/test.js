@@ -126,12 +126,17 @@
 // }
 
 // 2023-02-22 (1) 나누어 떨어지는 숫자 배열 
-function solution(arr, divisor) {
-    let answer=[]
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]%divisor==0){
-            answer.push(arr[i])
-        }
-    }
-    return answer.length==0? [-1] : answer.sort((a,b)=>a-b)
+// function solution(arr, divisor) {
+//     let answer=[]
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]%divisor==0){
+//             answer.push(arr[i])
+//         }
+//     }
+//     return answer.length==0? [-1] : answer.sort((a,b)=>a-b)
+// }
+// 폰번호 가리기
+function solution(num) {
+    let result= "*".repeat(num.length -4) + num.slice(-4);
+    return result;
 }
