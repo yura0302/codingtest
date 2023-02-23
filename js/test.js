@@ -158,6 +158,11 @@
 // }
 
 // 2023 -02 -24(2) 
+// function solution(s) {
+//     return s.split("").sort().reverse().join("")
+// }
+
+// 2023-02-24 (3)
 function solution(s) {
-    return s.split("").sort().reverse().join("")
-}
+    return  (s.length ===4 || s.length ===6) && s==parseInt(s)
+ }
