@@ -149,3 +149,10 @@
 function solution (absolutes,signs){
     return absolutes.reduce((acc,cur,i)=>acc+(cur*(signs[i]==true? 1:-1)),0)
 }
+
+
+//2023- 02 -24 (1) 최댓값 최솟값 
+function solution(s) {
+    let arr = s.split(" ")
+    return Math.min(...arr) + " " + Math.max(...arr)
+}
