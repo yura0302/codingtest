@@ -163,6 +163,17 @@
 // }
 
 // 2023-02-24 (3)
+// function solution(s) {
+//     return  (s.length ===4 || s.length ===6) && s==parseInt(s)
+//  }
+
+// 2023-02-27 (1) 가운데 숫자 가져오기
 function solution(s) {
-    return  (s.length ===4 || s.length ===6) && s==parseInt(s)
- }
+    let answer = '';
+    if(s.length%2==1){
+        answer=s[(s.length-1)/2];
+    }else{
+        answer=s[s.length/2-1]+s[s.length/2];
+    }
+    return answer;
+}
