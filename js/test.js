@@ -168,12 +168,16 @@
 //  }
 
 // 2023-02-27 (1) 가운데 숫자 가져오기
-function solution(s) {
-    let answer = '';
-    if(s.length%2==1){
-        answer=s[(s.length-1)/2];
-    }else{
-        answer=s[s.length/2-1]+s[s.length/2];
-    }
-    return answer;
-}
+// function solution(s) {
+//     let answer = '';
+//     if(s.length%2==1){
+//         answer=s[(s.length-1)/2];
+//     }else{
+//         answer=s[s.length/2-1]+s[s.length/2];
+//     }
+//     return answer;
+// }
+
+2023-02-28 (1) 배열의 유사도
+const solution = (s1, s2) => s1.filter((a,i) => s2.includes(a)).length
+
