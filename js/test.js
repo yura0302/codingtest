@@ -178,6 +178,10 @@
 //     return answer;
 // }
 
-2023-02-28 (1) 배열의 유사도
-const solution = (s1, s2) => s1.filter((a,i) => s2.includes(a)).length
+// 2023-02-28 (1) 배열의 유사도
+// const solution = (s1, s2) => s1.filter((a,i) => s2.includes(a)).length
 
+// 2023-03-01 (1) 피자나눠먹기1
+function solution(n) {
+    return n % 7 === 0 ? Math.floor(n / 7) : Math.floor(n / 7) + 1;
+}
