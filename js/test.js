@@ -182,6 +182,14 @@
 // const solution = (s1, s2) => s1.filter((a,i) => s2.includes(a)).length
 
 // 2023-03-01 (1) 피자나눠먹기1
-function solution(n) {
-    return n % 7 === 0 ? Math.floor(n / 7) : Math.floor(n / 7) + 1;
+// function solution(n) {
+//     return n % 7 === 0 ? Math.floor(n / 7) : Math.floor(n / 7) + 1;
+// }
+
+// 2023-03-03 (1) 내적
+function solution(a, b) {
+    let result =0;
+    for (let i=0; i<a.length; i++)
+        result+=a[i]*b[i];
+    return result;
 }
