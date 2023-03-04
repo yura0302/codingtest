@@ -187,9 +187,19 @@
 // }
 
 // 2023-03-03 (1) 내적
-function solution(a, b) {
-    let result =0;
-    for (let i=0; i<a.length; i++)
-        result+=a[i]*b[i];
-    return result;
-}
+// function solution(a, b) {
+//     let result =0;
+//     for (let i=0; i<a.length; i++)
+//         result+=a[i]*b[i];
+//     return result;
+// }
+
+// 2023-03-04 (1)
+SELECT M.MEMBER_NAME, R.REVIEW_TEXT ,DATE_FORMAT(R.REVIEW_DATE,"%Y-%m-%d")AS REVIEW_DATE
+FROM MEMBER_PROFILE M
+JOIN REST_REVIEW R
+ON M.MEMBER_ID = R.MEMBER_ID AND R.MEMBER_ID=(SELECT MEMBER_ID
+FROM REST_REVIEW
+                                             GROUP BY MEMBER_ID
+ORDER BY COUNT(MEMBER_ID)DESC LIMIT 1)
+ORDER BY R.REVIEW_DATE ASC,R.REVIEW_TEXT ASC
