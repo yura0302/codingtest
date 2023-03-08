@@ -9,14 +9,13 @@
 // })
 // console.log(result);
 
-
-// 2023-02-17 프로그래머스 나머지가 1이되는 수 찾기 
+// 2023-02-17 프로그래머스 나머지가 1이되는 수 찾기
 // function solution(n) {
 //     for (let i=2; i<n; i++){
 //         if(n%i===1){
 //             return i;
 //         }
-//     }    
+//     }
 // }
 // function solution(arr){
 //     return arr.reduce((a,b)=>a+b)/arr.length
@@ -25,7 +24,7 @@
 //     return String(n).split("").reduce((acc,cur)=>acc+parseInt(cur),0)
 // }
 
-// 숫자를 문자열로 변환 
+// 숫자를 문자열로 변환
 //split으로 자릿수 쪼개고 배열 만들기
 // function solution(num) {
 //     return  (num%2===0) ? "Even" : "Odd"
@@ -76,7 +75,7 @@
 //     return answer;
 // }
 
-//정수 제곱근 판별 
+//정수 제곱근 판별
 // function solution(n) {
 //     return Math.sqrt(n)%1 !==0 ? -1 : Math.pow(Math.sqrt(n)+1,2);
 // }
@@ -125,7 +124,7 @@
 //     }
 // }
 
-// 2023-02-22 (1) 나누어 떨어지는 숫자 배열 
+// 2023-02-22 (1) 나누어 떨어지는 숫자 배열
 // function solution(arr, divisor) {
 //     let answer=[]
 //     for(let i=0; i<arr.length; i++){
@@ -150,14 +149,13 @@
 //     return absolutes.reduce((acc,cur,i)=>acc+(cur*(signs[i]==true? 1:-1)),0)
 // }
 
-
-//2023- 02 -24 (1) 최댓값 최솟값 
+//2023- 02 -24 (1) 최댓값 최솟값
 // function solution(s) {
 //     let arr = s.split(" ")
 //     return Math.min(...arr) + " " + Math.max(...arr)
 // }
 
-// 2023 -02 -24(2) 
+// 2023 -02 -24(2)
 // function solution(s) {
 //     return s.split("").sort().reverse().join("")
 // }
@@ -205,10 +203,18 @@
 // ORDER BY R.REVIEW_DATE ASC,R.REVIEW_TEXT ASC
 
 //2023-03-07 (1)
-function solution(price, money, count) {
-    let need=0;
-    for (let i=0; i<=count; i++){
-        need+=price*i;
-    }
-    return need > money ? need-money : 0;
+// function solution(price, money, count) {
+//     let need=0;
+//     for (let i=0; i<=count; i++){
+//         need+=price*i;
+//     }
+//     return need > money ? need-money : 0;
+// }
+// 2023-03-08 (1)
+function solution(left, right) {
+  var answer = 0;
+  for (let i = left; i <= right; i++) {
+    Math.sqrt(i) % 1 == 0 ? (answer -= i) : (answer += i);
+  }
+  return answer;
 }
