@@ -220,13 +220,19 @@
 // }
 
 // 2023-03-10(1)
-function solution(s){
-  let total=0;
-  for (let i =0; i<s.length; i++){
-      s[i]=="("? total+=1 : total-=1
-          if(total<0){
-              break;
-  }
+// function solution(s){
+//   let total=0;
+//   for (let i =0; i<s.length; i++){
+//       s[i]=="("? total+=1 : total-=1
+//           if(total<0){
+//               break;
+//   }
+// }
+//       return total==0 ? true : false
+//   }
+
+2023-03-14(1)
+function solution(sides) {
+  sides.sort((a,b)=>a-b);
+  return (sides[0] + sides[1] > sides[2] ? 1 : 2)
 }
-      return total==0 ? true : false
-  }
